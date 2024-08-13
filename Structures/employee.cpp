@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 struct Employee{
     int id;
@@ -7,7 +8,8 @@ struct Employee{
 };
 
 int main(){
-    
-    std::cout<<'Hello World';
+    Employee obj;
+    obj.id = 12;
+    cout<<"Hello World";
     return 0;
 }
