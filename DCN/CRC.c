@@ -12,8 +12,6 @@ void calculate_crc(char data[], char generator[], char crc[]) {
         temp[data_len + i] = '0';
     }
     temp[data_len + gen_len - 1] = '\0';  // Null-terminate the string
-
-    // Perform XOR-based division for CRC calculation
     for (int i = 0; i <= data_len - 1; i++) {
         if (temp[i] == '1') {  // Only divide when there's a '1'
             for (int j = 0; j < gen_len; j++) {
@@ -28,8 +26,8 @@ void calculate_crc(char data[], char generator[], char crc[]) {
 }
 
 int main() {
-    char data[] = "1101011011";       // Example data
-    char generator[] = "10011";            // Example generator polynomial
+    char data[] = "1101011011";     
+    char generator[] = "10011";           
     char crc[100];
 
     calculate_crc(data, generator, crc);

@@ -18,7 +18,7 @@ void bitStuffing() {
         // Copy current bit to stuffed array
         stuff[j] = data[i];
         
-        // If bit is 1, increment counter
+        // If bit is 1 count++
         if(data[i] == 1) {
             count++;
         } else {
@@ -52,17 +52,14 @@ void bitDestuffing() {
     // Input size
     printf("\nEnter number of bits: ");
     scanf("%d", &n);
-    
-    // Input the stuffed bits
     printf("Enter stuffed bits: ");
     for(i = 0; i < n; i++)
         scanf("%d", &data[i]);
-    
-    // Destuffing process
+    //destuff
     for(i = 0; i < n; i++) {
         destuff[j] = data[i];
         
-        // If bit is 1, increment counter
+        // If bit is 1, count++ to skip
         if(data[i] == 1) {
             count++;
         } else {
