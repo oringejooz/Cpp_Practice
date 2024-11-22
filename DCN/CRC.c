@@ -6,7 +6,7 @@ void calculate_crc(char data[], char generator[], char crc[]) {
     int gen_len = strlen(generator);
     char temp[100];
 
-    // Copy data to temp and add 0s for division (space for remainder)
+    // Copy data to temp and add 0s for division 
     strcpy(temp, data);
     for (int i = 0; i < gen_len - 1; i++) {
         temp[data_len + i] = '0';
